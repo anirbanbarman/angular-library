@@ -59,7 +59,55 @@ constructor(private mapService:MapLibService){
 ```
 
 
-### that is all 
+## `MapLibService` service details
+```
+
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class MapLibService {
+  private map = new Map()
+
+  constructor() { }
+
+ 
+  set(key: any, value: any) {
+    this.map.set(key, value)
+  }
+  get(key: any) {
+    return this.map.get(key)
+
+  }
+  has(key: any) {
+    return this.map.has(key)
+  }
+  delete(key: any) {
+    this.map.delete(key)
+  }
+  clear() {
+    this.map.clear()
+  }
+  size() {
+    return this.map.size;
+  }
+
+
+
+
+}
+
+
+```
+
+
+### that's all 
+
+
+
+
+
 
 # happy to help
 
